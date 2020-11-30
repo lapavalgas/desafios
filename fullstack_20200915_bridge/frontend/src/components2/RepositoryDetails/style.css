@@ -1,0 +1,147 @@
+:root {
+    --primary-color:   #808c6c;
+    --secondary-color: #fdac61;
+    --tertiary-color:#f5f1da;
+    --complementary-color: #e3dfc8;
+    --grey-1-color: #413a3a;
+    --grey-2-color: #5f5454;
+    --grey-3-color: #877878;
+    --grey-4-color: #b3b3b3;
+    --white-1-color: #ffffff;
+    --white--color2: #f2f2f2;
+}
+
+.repositoryContent{
+    width: 95%;
+    max-width: 770px;
+    margin: 3px auto;
+    padding: 5px;
+}
+
+.colorBlack{
+        line-height: 1.5;
+      color: black;
+      font-weight: 600;
+}
+.colorWhite{
+    color: var(--tertiary-color);
+    font-weight: 300;
+}
+
+.repositoryInteract{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.391);
+    
+}
+.owner{
+    font-size: larger;
+    margin-left: 15px;
+    align-self: center;
+    color: black;
+}
+
+.buttons{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.border{
+    font-weight: 600;
+    margin: 2px;
+    padding: 3px;
+    min-width: 100px;
+    max-width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--grey-1-color);
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.repositoryDetails{
+    padding: 15px;
+    width: 100%;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+.repositoryDetailsHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.repositoryDetailsCommits{
+    display: flex;
+}
+.repositoryDetailsCommits>p{
+    margin-left: 5px;
+}
+.repositoryTopic{
+    margin: 10px 0;
+    line-height: 1.0;
+}
+
+.repositoryFavorites{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.borderFavorites{
+    font-weight: 600;
+    margin: 2px;
+    padding: 3px;
+    min-width: 120px;
+    max-width: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 12px;
+    color: var(--grey-1-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    height: 26px;
+    min-height: 26px;
+    max-height: 26px;
+    align-self: baseline;
+    background-color: var(--secondary-color);
+    display: flex;
+}
+.buttonFavorites{
+    align-self: flex-end;
+}
+
+.link{
+    color: inherit;
+    text-decoration: none;
+    align-self: center;
+}
+
+
+.icon{
+    max-width: 15px;
+    max-height: 15px;
+    align-self: center;
+}
+
+
+.repositoryUrl{
+}
+/* .lastLine{
+    min-height: 20px;
+    
+} */
+@media only screen and (min-width: 760px) {
+    .repositoryInteract{
+        display: flex;
+        justify-content: space-between;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

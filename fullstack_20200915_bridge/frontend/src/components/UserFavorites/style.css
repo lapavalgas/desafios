@@ -1,0 +1,66 @@
+.repositorySearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.repositorySearch>form>select{
+    width: 100%;
+    height: 40px;
+    max-height: 40px;
+    max-width: 450px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+    border-radius: 8px 8px 8px 8px;
+    outline: none;
+}
+
+
+.repositoryContent{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.repositoryToList{
+    margin-top: 10px;
+    border-top: 1px solid rgba(126, 126, 126, 0.624);
+    padding: 10px;
+    padding-bottom: 30px;
+    line-height: 1.0;
+}
+
+.repositoryToList>p{
+    margin: 0px;
+    padding: 0px;   
+}
+
+.repositoryToList>a{
+    text-decoration: none;
+}
+
+.repositoryNameAndOwner{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.repositoryIcons{
+    margin-top: 5px;
+    display: flex;
+    
+}
+.repositoryStarsIcon{
+    max-width: 15px;
+    max-height: 15px;
+    
+}
+.repositoryStars{
+    margin-left: 5px;
+}
+.repositoryLanguage{
+    margin-left: 25px;
+}
+.repositoryLastUpdate{
+    margin-left: 25px;
+}

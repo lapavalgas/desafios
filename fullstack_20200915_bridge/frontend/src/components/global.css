@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Work Sans', sans-serif;
+  src: local('Work Sans'), url(https://fonts.googleapis.com/css?family=Montserrat:900%7CWork+Sans:300); 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color:   #808c6c;
+  --secondary-color: #fdac61;
+  --tertiary-color:#f5f1da;
+  --complementary-color: #e3dfc8;
+  --grey-1-color: #413a3a;
+  --grey-2-color: #5f5454;
+  --grey-3-color: #877878;
+  --grey-4-color: #b3b3b3;
+  --white-1-color: #ffffff;
+  --white--color2: #f2f2f2;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--primary-color);
+  text-decoration: var(--primary-color);
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  /* font-family: 'Montserrat', sans-serif;
+  font-weight: 900; */
+ }
+
+ div.appMain{
+   margin-top: 260px;
+   margin: 10px;
+   padding: 20px;
+ }

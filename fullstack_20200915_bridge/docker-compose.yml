@@ -1,0 +1,52 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:latest #5.7
+    volumes:
+      - ./.docker/mysql/data:/var/lib/mysql
+      - ./.docker/mysql/dump:/docker-entrypoint-initdb.d
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: bridge
+      MYSQL_PASSWORD: bridge
+      MYSQL_ROOT_PASSWORD: bridge
+      MYSQL_DATABASE: bridge
+    ports:
+      - "3306:3306"
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+    depends_on:
+      - db
+ 
+  appback:
+    container_name: bridge-java-app-github
+    build:
+      context: ./fullstackbridge
+      dockerfile: Dockerfile
+    volumes:
+      - ./fullstackbridge:/appback
+    ports:
+    - "8080:8080"
+    restart: always
+    working_dir: /appback
+    depends_on:
+      - db
+
+  appfront:
+    container_name: bridge-react-app-github
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+        - './frontend:/appfront'
+        - '/appfront/node_modules'
+    ports:
+        - '3000:3000'
+    stdin_open: true
+    restart: always
+    environment:
+        - NODE_ENV=development
