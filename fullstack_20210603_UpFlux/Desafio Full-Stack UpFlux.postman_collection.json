@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "1cba66ad-8290-4d6e-8cf5-1fe237d3bc35",
+		"name": "Desafio Full-Stack UpFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book\": {\r\n        \"title\": \"Puts O velho e o mar\",\r\n        \"autor\": \"Apenas um Livro para Testes\",\r\n        \"qnttStock\":\"2\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ ALLBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ ALLBooks OrderByStock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/byStock",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"byStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ ID Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b9198adcfaf1590be75a9e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b9198adcfaf1590be75a9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ TITLE Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/title/Livro para teste",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"title",
+						"Livro para teste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ID Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book\": {\r\n        \"title\": \"Livro para Testes\",\r\n        \"autor\": \"Apenas um Livro para Teste ATUALIZADO\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/60b9198adcfaf1590be75a9e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b9198adcfaf1590be75a9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL ID Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b91110dcfaf1590be75a65",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b91110dcfaf1590be75a65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL ALL Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/!/delete/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"!",
+						"delete",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loan\": {\r\n        \"user\": \"Usuário Teste\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/book/60b94e3ef0fa337658c9d85e/loan",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b94e3ef0fa337658c9d85e",
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b93ceddcfaf1590be75b7d/loan",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b93ceddcfaf1590be75b7d",
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Loan (NOT-RETURNED)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b931cadcfaf1590be75b2c/loan/not-returned",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b931cadcfaf1590be75b2c",
+						"loan",
+						"not-returned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Loan (RETURNED)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b931cadcfaf1590be75b2c/loan/returned",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b931cadcfaf1590be75b2c",
+						"loan",
+						"returned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ID Loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b91eb7dcfaf1590be75aac/loan/60b92e1edcfaf1590be75b10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b91eb7dcfaf1590be75aac",
+						"loan",
+						"60b92e1edcfaf1590be75b10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER Loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b94e3ef0fa337658c9d85e/loan/user?u=usuário",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b94e3ef0fa337658c9d85e",
+						"loan",
+						"user"
+					],
+					"query": [
+						{
+							"key": "u",
+							"value": "usuário"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT ID Loan (RETURN Path)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b94e3ef0fa337658c9d85e/loan/60b94eb0f0fa337658c9d862/return",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b94e3ef0fa337658c9d85e",
+						"loan",
+						"60b94eb0f0fa337658c9d862",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ID Loan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b91eb7dcfaf1590be75aac/loan/60b91fe9dcfaf1590be75ab5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b91eb7dcfaf1590be75aac",
+						"loan",
+						"60b91fe9dcfaf1590be75ab5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ALL Loan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/book/60b91eb7dcfaf1590be75aac/loan/!/delete/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"60b91eb7dcfaf1590be75aac",
+						"loan",
+						"!",
+						"delete",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

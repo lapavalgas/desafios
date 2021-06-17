@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - ./mongo-entrypoint:/docker-entrypoint-initdb.d
+      - mongodb:/data/db
+      - mongoconfig:/data/configdb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=upfluxuser
+      - MONGO_INITDB_ROOT_PASSWORD=upfluxpass
+      - MONGO_INITDB_DATABASE=desafiofullstack
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+        labels: production_status
+        env: os
+        
+volumes:
+  mongodb:
+  mongoconfig:
